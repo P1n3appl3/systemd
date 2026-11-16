@@ -3457,7 +3457,7 @@ int setup_tmp_dir_one(const char *id, const char *prefix, char **ret_path) {
         if (r < 0)
                 return r;
 
-        d = strjoin(prefix, "/systemd-private-", SD_ID128_TO_STRING(boot_id), "-", id, "-XXXXXX");
+        d = strjoin(prefix, "/.systemd-private-", SD_ID128_TO_STRING(boot_id), "-", id, "-XXXXXX");
         if (!d)
                 return -ENOMEM;
 
